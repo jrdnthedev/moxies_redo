@@ -1,5 +1,11 @@
+
+@import 'typography';
+
 * {
     box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
 }
 
 body {
@@ -27,14 +33,32 @@ body {
 
 main {
     grid-column: 1 / -1;
+    padding: 1rem;
 }
 
 header {
     grid-column: 1 / 10;
+    padding: 1rem;
+}
+footer {
+    padding: 1rem;
 }
 
 aside {
     grid-column: 10 / -1;
+    padding: 1rem;
+}
+
+#banner_image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 160px);
+    width: 100%;
+}
+
+section {
+    margin-bottom: 3rem;
 }
  @media screen and (min-width:1024px){
     header, aside {
