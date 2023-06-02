@@ -40,6 +40,8 @@ main {
 header {
     grid-column: 1 / 10;
     padding: 1rem;
+    display: grid;
+    align-items: center;
 }
 footer {
     padding: 1rem;
