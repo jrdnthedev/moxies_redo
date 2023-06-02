@@ -1,5 +1,9 @@
 
+@use 'variables';
+
 .headline_banner {
     font-size: 1.7rem;
     text-transform: uppercase;
+    color: variables.$fire;
+    font-weight: 500;
 }
