@@ -1,0 +1,41 @@
+@use 'variables';
+
+button {
+    padding: 3rem 1rem 1rem 1rem;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: variables.$white;
+    background-color: variables.$emerald;
+    font-weight: bold;
+    letter-spacing: 1px;
+    .small{
+
+    }
+}
+
+.long-arrow-right{
+  display: inline-block;
+  margin: 14px auto 0;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid variables.$white;
+  border-left: 2px solid variables.$white;
+  margin-left: 42px;
+  overflow: hidden;
+}
+
+.long-arrow-right{
+ transform: rotate(89deg);
+}
+
+.long-arrow-right::after{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 45px;
+  background-color: variables.$white;
+  transform: rotate(-45deg) translate(15px, 4px);
+  left: 0;
+  top: 0;
+}
