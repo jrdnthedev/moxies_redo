@@ -7,3 +7,21 @@
     color: variables.$fire;
     font-weight: 500;
 }
+
+.secondary_headline {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
+
+.fire_italic {
+    display: block;
+    color: rgb(160,101,61);
+    font-style: italic;
+    font-weight: 100;
+}
+
+.paragraph{
+    line-height: 2rem;
+}
