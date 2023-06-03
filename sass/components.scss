@@ -1,16 +1,20 @@
 @use 'variables';
 
 button {
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     border: none;
     text-transform: uppercase;
     font-size: .8rem;
     color: variables.$white;
-    background-color: variables.$emerald;
     font-weight: bold;
     letter-spacing: 1px;
-    .small{
-
+    &.small{
+      padding: 0rem 1rem .5rem 2rem;
+      background-color: variables.$white;
+      border: 1px solid variables.$emerald;
+    }
+    &.primary {
+      background-color: variables.$emerald;
     }
 }
 
@@ -23,6 +27,10 @@ button {
   border-left: 2px solid variables.$white;
   margin-left: 42px;
   overflow: hidden;
+  &.inverted {
+    border-top: 2px solid variables.$emerald;
+    border-left: 2px solid variables.$emerald;
+  }
 }
 
 .long-arrow-right{
@@ -38,4 +46,15 @@ button {
   transform: rotate(-45deg) translate(15px, 4px);
   left: 0;
   top: 0;
+}
+
+.long-arrow-right.inverted::after{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 45px;
+  transform: rotate(-45deg) translate(15px, 4px);
+  left: 0;
+  top: 0;
+  background-color: variables.$emerald;
 }
