@@ -57,7 +57,14 @@ footer {
 aside {
     grid-column: 10 / -1;
     padding: 1rem;
-    text-align: center;
+    text-align: right;
+}
+
+header, aside {
+    position: sticky;
+    top: 0;
+    background: variables.$white;
+    z-index: 3;
 }
 
 #banner_image {

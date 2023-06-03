@@ -7,7 +7,7 @@ function toggle() {
     isToggle = !isToggle;
     const body = document.getElementById('body');
     const nav = document.getElementById('hamburger_menu');
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('mobile_navigation');
 
     if(isToggle) {
         body?.classList.add('scroll-lock');
