@@ -68,12 +68,26 @@ header, aside {
     z-index: 3;
 }
 
-#banner_image {
+.bkg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100vh - 160px);
     width: 100%;
+}
+
+figure {
+    .bkg {
+        height: 300px;
+        margin-bottom: 1rem;
+    }
+    margin: 0 0 3rem 0;
+}
+
+#flavour_intro {
+    margin-bottom: 2rem;
+}
+#banner_image {
+    height: calc(100vh - 160px);
     position: relative;
     button {
         position: absolute;
