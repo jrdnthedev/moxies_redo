@@ -1,6 +1,7 @@
 
 @use 'variables';
 @import 'typography';
+@import 'sections';
 @import 'navigation';
 @import 'components';
 
@@ -84,6 +85,9 @@ figure {
     figcaption {
         p {
             margin-bottom: 1rem;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
     }
 }
