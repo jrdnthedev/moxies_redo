@@ -7,13 +7,16 @@ function toggle() {
     isToggle = !isToggle;
     const body = document.getElementById('body');
     const nav = document.getElementById('hamburger_menu');
+    const menu = document.getElementById('menu');
 
     if(isToggle) {
         body?.classList.add('scroll-lock');
         nav?.classList.add('active');
+        menu?.classList.add('active');
     } else {
         body?.classList.remove('scroll-lock');
         nav?.classList.remove('active');
+        menu?.classList.remove('active');
     }
 
 }
