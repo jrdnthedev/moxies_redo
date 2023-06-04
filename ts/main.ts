@@ -10,11 +10,11 @@ function toggle() {
     const menu = document.getElementById('mobile_navigation');
 
     if(isToggle) {
-        body?.classList.add('scroll-lock');
+        // body?.classList.add('scroll-lock');
         nav?.classList.add('active');
         menu?.classList.add('active');
     } else {
-        body?.classList.remove('scroll-lock');
+        // body?.classList.remove('scroll-lock');
         nav?.classList.remove('active');
         menu?.classList.remove('active');
     }
