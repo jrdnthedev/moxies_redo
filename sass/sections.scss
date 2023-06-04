@@ -18,3 +18,37 @@
         }
     }
 }
+
+@media screen and (min-width:600px) {
+    #bites_section {
+
+        #bites_gallery {
+            figure {
+
+                div {
+                    height: 300px;
+                }
+                figcaption {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    #bites_section {
+
+        #bites_gallery {
+            display: grid;
+            grid-template: min-content auto min-content / repeat(12, 1fr);
+            column-gap: 1rem;
+            figure {
+                grid-column: span 4;
+                div {
+                    margin-bottom: 1rem;
+                    grid-column: span 12;
+                }
+            }
+        }
+    }
+}

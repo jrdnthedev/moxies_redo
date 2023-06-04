@@ -120,3 +120,12 @@ section {
         grid-column: 1 / -1;
     }
  }
+
+ @media screen and (min-width:1024px) {
+    header, aside {
+        position: fixed;
+    }
+    aside {
+        top: 3rem;
+    }
+ }
