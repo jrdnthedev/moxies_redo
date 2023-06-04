@@ -16,6 +16,10 @@ button {
     &.primary {
       background-color: variables.$emerald;
     }
+    &.inverted {
+      background-color: variables.$white;
+      color: variables.$emerald;
+    }
 }
 
 .long-arrow-right{

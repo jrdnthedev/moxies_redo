@@ -19,6 +19,32 @@
     }
 }
 
+#specials_section {
+    figure {
+        display: flex;
+        flex-direction: column;
+        .bkg {
+            margin-bottom: 0;
+        }
+        figcaption  {
+            padding: 1rem;
+            background-color: variables.$emerald;
+        }
+    }
+    p {
+        color: variables.$white;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 3rem;
+        span {
+            font-style: italic;
+            display: block;
+            font-weight: 100;
+        }
+    }
+}
+
 @media screen and (min-width:600px) {
     #bites_section {
 
@@ -48,6 +74,18 @@
                     margin-bottom: 1rem;
                     grid-column: span 12;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:850px) {
+    #specials_section {
+        figure {
+            display: flex;
+            flex-direction: row;
+            figcaption  {
+                min-width: max-content;
             }
         }
     }
