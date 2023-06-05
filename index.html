@@ -13,26 +13,30 @@
     </head>
 
     <body id="body">
-        <header>
-            <h1 class="headline_banner">Moxies</h1>
-        </header>
-        <aside>
-            <button id="hamburger_link">
-                <div id="hamburger_menu">
-                    <div id="top"></div>
-                    <div id="bottom"></div>
-                </div>
-            </button>
-            <nav id="main_navigation">
-                <ul class="menu">
-                    <li><a href="#">Restaurant</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Gift Cards</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <div id="header_wrapper">
+            <div id="desktop_wrapper">
+                <header>
+                    <h1 class="headline_banner">Moxies</h1>
+                </header>
+                <aside>
+                    <button id="hamburger_link">
+                        <div id="hamburger_menu">
+                            <div id="top"></div>
+                            <div id="bottom"></div>
+                        </div>
+                    </button>
+                    <nav id="main_navigation">
+                        <ul class="menu">
+                            <li><a href="#">Restaurant</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+        </div>
         <nav id="mobile_navigation">
             <ul class="menu">
                 <li><a href="#">Restaurant</a></li>
@@ -133,12 +137,26 @@
     
         <footer id="footer">
             <section id="form_section">
-                
+                <p id="footer_title">Lets stay <span>in touch</span></p>
+                <form action="#">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                    <input type="text" name="email" id="email" placeholder="Email Address">
+                    <input type="text" name="city" id="city" placeholder="City">
+                </form>
             </section>
 
 
             <section id="footer_link_section">
-                
+                <nav id="footer_navigation">
+                    <ul class="menu">
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </nav>
             </section>
         </footer>
     

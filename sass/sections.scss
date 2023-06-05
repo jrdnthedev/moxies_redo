@@ -45,6 +45,37 @@
     }
 }
 
+#form_section{
+    > p {
+        margin-bottom: 2rem;
+    }
+    form {
+        display: grid;
+        grid-template: min-content auto min-content / repeat(12, 1fr);
+        gap: 1rem;
+        input {
+            grid-column: span 6;
+        }
+    }
+}
+#footer_link_section {
+    margin-bottom: 0;
+}
+#header_wrapper {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template: min-content auto min-content / repeat(12, 1fr);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+#desktop_wrapper {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template: min-content auto min-content / repeat(12,1fr);
+}
+
 @media screen and (min-width:600px) {
     #bites_section {
 
@@ -88,5 +119,18 @@
                 min-width: max-content;
             }
         }
+    }
+}
+
+@media screen and (min-width:1024px){
+    #header_wrapper {
+        grid-column: 1 / 4;
+        grid-row: 1/10;
+        top: unset;
+        display: unset;
+    }
+    #desktop_wrapper {
+        position: sticky;
+        top: 0;
     }
 }

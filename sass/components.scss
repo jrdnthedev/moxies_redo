@@ -62,3 +62,14 @@ button {
   top: 0;
   background-color: variables.$emerald;
 }
+
+input {
+  background: inherit;
+  border: none;
+  border-bottom: 1px solid variables.$white;
+  padding: 0.5rem 0.1rem;
+  color: variables.$white;
+  &::placeholder {
+    color: variables.$white;
+  }
+}

@@ -53,7 +53,9 @@ header {
     align-items: center;
 }
 footer {
-    padding: 1rem;
+    padding: 3rem 1rem;
+    grid-column: 1 / -1;
+    background-color: variables.$emerald;
 }
 
 aside {
@@ -63,10 +65,7 @@ aside {
 }
 
 header, aside {
-    position: sticky;
-    top: 0;
     background: variables.$white;
-    z-index: 3;
 }
 
 .bkg {
@@ -110,7 +109,7 @@ section {
 }
  @media screen and (min-width:1024px){
     header, aside {
-        grid-column: 1 / 4;
+        grid-column: 1 / -1;
     }
     main {
         grid-row: 1 / 10;
@@ -119,13 +118,12 @@ section {
     footer {
         grid-column: 1 / -1;
     }
- }
-
- @media screen and (min-width:1024px) {
-    header, aside {
-        position: fixed;
-    }
     aside {
-        top: 3rem;
+        position: sticky;
+        top: 64px;
+    }
+    header {
+        position: sticky;
+        top: 0;
     }
  }
