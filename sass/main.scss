@@ -117,6 +117,9 @@ section {
     }
     footer {
         grid-column: 1 / -1;
+        display: grid;
+        grid-template: min-content auto min-content/repeat(12, 1fr);
+        column-gap: 2rem;
     }
     aside {
         position: sticky;
