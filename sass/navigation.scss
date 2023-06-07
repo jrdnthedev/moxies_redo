@@ -64,7 +64,8 @@ ul.menu {
     margin: 5rem 0 0;
     li {
         margin-bottom: 3rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
+        font-weight: bold;
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -108,6 +109,11 @@ ul.menu {
             margin: 2rem 0 0;
             li {
                 margin-bottom: 2rem;
+                transition: .8s ease;
+                &:hover {
+                    opacity: .4;
+                    transition: .8s ease;
+                }
             }
         }
     }
