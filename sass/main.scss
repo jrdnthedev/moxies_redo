@@ -130,3 +130,11 @@ section {
         top: 0;
     }
  }
+
+ @media screen and (min-width:1500px) {
+    figure {
+        .bkg {
+            height: 700px;
+        }
+    }
+ }
