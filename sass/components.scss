@@ -27,13 +27,13 @@ button {
   margin: 14px auto 0;
   width: 15px;
   height: 15px;
-  border-top: 2px solid variables.$white;
-  border-left: 2px solid variables.$white;
+  border-top: 1px solid variables.$white;
+  border-left: 1px solid variables.$white;
   margin-left: 42px;
   overflow: hidden;
   &.inverted {
-    border-top: 2px solid variables.$emerald;
-    border-left: 2px solid variables.$emerald;
+    border-top: 1px solid variables.$emerald;
+    border-left: 1px solid variables.$emerald;
   }
 }
 
@@ -44,7 +44,7 @@ button {
 .long-arrow-right::after{
   content: "";
   display: block;
-  width: 2px;
+  width: 1px;
   height: 45px;
   background-color: variables.$white;
   transform: rotate(-45deg) translate(15px, 4px);
@@ -55,7 +55,7 @@ button {
 .long-arrow-right.inverted::after{
   content: "";
   display: block;
-  width: 2px;
+  width: 1px;
   height: 45px;
   transform: rotate(-45deg) translate(15px, 4px);
   left: 0;

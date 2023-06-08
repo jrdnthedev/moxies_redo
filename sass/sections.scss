@@ -25,10 +25,14 @@
         flex-direction: column;
         .bkg {
             margin-bottom: 0;
+            height: 500px;
         }
         figcaption  {
             padding: 1rem;
             background-color: variables.$emerald;
+            font-size: 1rem;
+            font-weight: 100;
+            line-height: 1.8rem;
         }
     }
     p {
@@ -37,6 +41,11 @@
         font-size: 2rem;
         font-weight: bold;
         line-height: 3rem;
+        &.paragraph {
+            font-size: 1rem;
+            font-weight: 100;
+            line-height: 1.8rem;
+        }
         span {
             font-style: italic;
             display: block;
@@ -79,6 +88,7 @@
     display: grid;
     grid-template: min-content auto min-content / 41% 13% 13% 13% 13%;
     column-gap: 1rem;
+    overflow:hidden;
     transition: .7s ease all;
     &:hover {
         transition: .7s ease all;
@@ -147,8 +157,12 @@
         figure {
             display: flex;
             flex-direction: row;
+            .bkg {
+                height: auto;
+            }
             figcaption  {
-                min-width: max-content;
+                flex: 1 0 50%;
+                padding: 4rem;
             }
         }
     }
