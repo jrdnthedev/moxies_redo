@@ -157,6 +157,11 @@
 @media screen and (min-width:768px) {
     #bites_section {
 
+        .paragraph {
+            width: 500px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
         #bites_gallery {
             display: grid;
             grid-template: min-content auto min-content / repeat(12, 1fr);
