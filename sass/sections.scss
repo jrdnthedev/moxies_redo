@@ -10,10 +10,21 @@
             div {
                 grid-column: span 6;
                 margin-bottom: 0;
-                height: 150px;
+                height: 200px;
             }
             figcaption {
                 grid-column: span 6;
+                align-self: center;
+                p{
+                    line-height: 1.5rem;
+                    &.caption_text {
+                        font-weight: bold;
+                        color: rgb(23, 63, 53);
+                        font-size: 1rem;
+                        border-bottom: 1px solid rgb(23, 63, 53);
+                        padding-bottom: 1rem;
+                    }
+                }
             }
         }
     }
@@ -111,10 +122,19 @@
             transition: 1s ease all;
            }
         }
+        .bkg {
+            margin-bottom: 0;
+        }
         figcaption {
             visibility: hidden;
             transition: .1s ease all;
            }
+    }
+}
+
+#carousel {
+    p.caption_text {
+        margin-bottom: 1rem;
     }
 }
 
@@ -146,6 +166,17 @@
                 div {
                     margin-bottom: 1rem;
                     grid-column: span 12;
+                }
+                figcaption {
+                    grid-column: span 12;
+                    align-self: unset;
+                    p{
+                        line-height: 1.5rem;
+                        &.caption_text {
+                            border-bottom: unset;
+                            padding-bottom: unset;
+                        }
+                    }
                 }
             }
         }
@@ -209,5 +240,11 @@
     }
     #banner_section {
         margin-bottom: 9rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #specials_section figure figcaption  {
+        flex: 1 0 40%;
     }
 }
