@@ -138,6 +138,15 @@
     }
 }
 
+#aside_links {
+    display: none;
+    text-align: left;
+    button {
+        &:first-of-type {
+            margin-bottom: 1rem;
+        }
+    }
+}
 @media screen and (min-width:600px) {
     #bites_section {
 
@@ -257,6 +266,9 @@
     }
     #banner_section {
         margin-bottom: 9rem;
+    }
+    #aside_links {
+        display: block;
     }
 }
 

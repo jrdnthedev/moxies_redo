@@ -17,7 +17,7 @@
 
 .fire_italic {
     display: inline-block;
-    color: rgb(160,101,61);
+    color: variables.$fire;
     font-style: italic;
     font-weight: 100;
     &.stacked {

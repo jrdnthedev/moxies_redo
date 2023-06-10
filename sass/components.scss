@@ -20,6 +20,15 @@ button {
       background-color: variables.$white;
       color: variables.$emerald;
     }
+    &.fire {
+      background-color: variables.$fire;
+      color: variables.$white;
+    }
+    &.fire_inverted {
+      background-color: variables.$white;
+      color: variables.$fire;
+      border:1px solid variables.$fire;
+    }
 }
 
 .long-arrow-right{
