@@ -1,0 +1,15 @@
+#intro_section {
+    address {
+        margin-bottom: 1rem;  
+    }
+    p {
+        margin-bottom: 1rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .address_title {
+        width: max-content;
+        padding-right: 2rem;
+    }
+}

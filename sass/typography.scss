@@ -35,7 +35,7 @@
     letter-spacing: 1px;
 }
 
-.unique_title {
+.section_title {
     font-size: 2rem;
     text-transform: capitalize;
     font-weight: bold;
@@ -51,4 +51,18 @@
         font-style: italic;
         font-weight: 100;
     }
+}
+
+.address_title {
+    color: variables.$fire;
+    border-bottom: 1px solid variables.$emerald;
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.address_body {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
 }
