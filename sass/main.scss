@@ -26,8 +26,6 @@ body {
 
 .scroll-lock {
     overflow-y: hidden;
-    //for ios
-    position: fixed;
 }
 
 *:focus {
@@ -108,6 +106,14 @@ figure {
 section {
     margin-bottom: 3rem;
 }
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    .scroll-lock {
+        position: fixed;
+    }
+}
+
  @media screen and (min-width:1024px){
     header, aside {
         grid-column: 1 / -1;
