@@ -184,6 +184,7 @@
                 figcaption {
                     grid-column: span 12;
                     align-self: unset;
+                    text-align: center;
                     p{
                         line-height: 1.5rem;
                         &.caption_text {
@@ -267,13 +268,13 @@
     #banner_section {
         margin-bottom: 9rem;
     }
-    #aside_links {
-        display: block;
-    }
 }
 
 @media screen and (min-width:1200px) {
     #specials_section figure figcaption  {
         flex: 1 0 40%;
+    }
+    #aside_links {
+        display: block;
     }
 }
