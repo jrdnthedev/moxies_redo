@@ -20,7 +20,8 @@ function toggleMenu() {
         nav?.classList.remove('active');
         menu?.classList.remove('active');
     }
-
+    this.ariaExpanded = isMenuToggle;
+    this.ariaHasPopup = isMenuToggle;
 }
 
 stacked?.addEventListener('mouseover', function(event){
@@ -53,12 +54,11 @@ toggle_btn.forEach( button => {
         if(isListToggle){
             this.nextElementSibling?.classList.add('active');
             this.classList.add('active');
-            this.ariaExpanded = isListToggle;
             
         } else {
             this.nextElementSibling?.classList.remove('active');
             this.classList.remove('active');
-            this.ariaExpanded = isListToggle;
         }
+        this.ariaExpanded = isListToggle;
     });
 })
