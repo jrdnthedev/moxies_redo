@@ -91,7 +91,7 @@ input {
   display: flex;
   justify-content: space-between;
   width: 100%;
-
+  cursor: pointer;
   .cross {
     &:before {
       transform: rotate(0deg);
@@ -125,7 +125,6 @@ input {
   width: 12px;
   height: 12px;
   opacity: 0.3;
-
   &:hover {
     opacity: 1;
   }
