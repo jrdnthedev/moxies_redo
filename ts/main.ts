@@ -1,16 +1,17 @@
-let isToggle = false;
-
+let isMenuToggle = false;
+let isListToggle = false;
 const element = document.getElementById("hamburger_link");
-element?.addEventListener("click", toggle);
+element?.addEventListener("click", toggleMenu);
 const stacked = document.getElementById('stacked_image_wrapper');
+const toggle_btn = document.querySelectorAll('#hours .toggle_btn');
 
-function toggle() {
-    isToggle = !isToggle;
+function toggleMenu() {
+    isMenuToggle = !isMenuToggle;
     const body = document.getElementById('body');
     const nav = document.getElementById('hamburger_menu');
     const menu = document.getElementById('mobile_navigation');
 
-    if(isToggle) {
+    if(isMenuToggle) {
         body?.classList.add('scroll-lock');
         nav?.classList.add('active');
         menu?.classList.add('active');
@@ -45,3 +46,19 @@ stacked?.addEventListener('mouseover', function(event){
             break;
     }
 });
+
+toggle_btn.forEach( button => {
+    button.addEventListener("click", function(){
+        isListToggle = !isListToggle;
+        if(isListToggle){
+            this.nextElementSibling?.classList.add('active');
+            this.classList.add('active');
+            this.ariaExpanded = isListToggle;
+            
+        } else {
+            this.nextElementSibling?.classList.remove('active');
+            this.classList.remove('active');
+            this.ariaExpanded = isListToggle;
+        }
+    });
+})
