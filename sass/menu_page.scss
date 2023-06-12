@@ -16,9 +16,10 @@
 }
 
 #menu_section_nav{
-    position: sticky;
-    top: 0px;
-    margin-bottom: 2rem;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
     ul {
         background: white;
         margin: 0;
@@ -27,6 +28,7 @@
         position: absolute;
         left: 0;
         right: 0;
+        bottom: 47px;
         z-index: 1;
         height: 0px;
         transition: .6s ease all;
@@ -50,7 +52,7 @@
 }
 
 #menu_section_btn{
-    background: rgb(23, 63, 53);
+    background: variables.$fire;
     padding: 1rem 2rem;
     width: 100%;
     display: flex;
@@ -60,9 +62,10 @@
 }
 
 #menu_content section {
-    padding-top: 70px;
+    padding-top: 80px;
     margin-bottom: 0;
 }
+
 @media screen and (min-width: 1024px) {
     #location_information {
         display: grid;
@@ -75,5 +78,54 @@
         #hours {
             grid-column: span 6;
         }
+    }
+
+    #menu_section_nav{
+        position: sticky;
+        top: 0px;
+        left: unset;
+        right: unset;
+        margin-bottom: 2rem;
+        ul {
+            bottom: unset;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #menu_section {
+        display: grid;
+        grid-template: min-content auto min-content / repeat(12, 1fr);
+        column-gap: 1rem;
+        position: relative;
+        //allows position sticky to work inside of a grid container
+        //add this to the parent or the child element that needs to be sticky
+        align-items: start;
+        #menu_section_nav {
+            grid-column: span 3;
+        }
+        #menu_content {
+            grid-column: span 9;
+            section {
+                padding-top: 1.9rem;
+            }
+        }
+    }
+    #menu_section_nav ul {
+        background: unset;
+        position: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        height: unset;
+        visibility: unset;
+        opacity: unset;
+        li {
+            border-bottom: unset;
+            font-weight: bold;
+        }
+    }
+    #menu_section_btn {
+        display: none;
     }
 }
