@@ -1,9 +1,12 @@
 let isMenuToggle = false;
 let isListToggle = false;
+let isMenuListToggle = false;
 const element = document.getElementById("hamburger_link");
 element?.addEventListener("click", toggleMenu);
 const stacked = document.getElementById('stacked_image_wrapper');
 const toggle_btn = document.querySelectorAll('#hours .toggle_btn');
+const menu_btn = document.getElementById('menu_section_btn');
+menu_btn?.addEventListener('click', openMenuToggle);
 
 function toggleMenu() {
     isMenuToggle = !isMenuToggle;
@@ -62,3 +65,15 @@ toggle_btn.forEach( button => {
         this.ariaExpanded = isListToggle;
     });
 })
+
+function openMenuToggle() {
+    isMenuListToggle = !isMenuListToggle;
+    const list = document.getElementById('menu_section_dropdown');
+
+    if(isMenuListToggle) {
+        list?.classList.add('active');
+    } else {
+        list?.classList.remove('active');
+    }
+    this.ariaExpanded = isMenuListToggle;
+}

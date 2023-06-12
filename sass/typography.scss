@@ -66,3 +66,15 @@
     font-weight: bold;
     font-style: normal;
 }
+
+h2 {
+    margin-bottom: 2rem !important;
+    color: variables.$fire;
+    width: max-content;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(23, 63, 53);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
