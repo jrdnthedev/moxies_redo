@@ -77,13 +77,14 @@ function openMenuToggle() {
         list?.classList.remove('active');
     }
     this.ariaExpanded = isMenuListToggle;
+    this.ariaHasPopup = isMenuToggle;
 }
 
 links.forEach( item =>{
     item.addEventListener("click", clickHandler);
 })
 
-function clickHandler(e) {
+function clickHandler(e: Event) {
   e.preventDefault();
   const href = this.getAttribute("href");
   const offsetTop = document.querySelector(href).getBoundingClientRect().top +  window.scrollY;
