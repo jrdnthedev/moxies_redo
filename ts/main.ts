@@ -7,6 +7,7 @@ const stacked = document.getElementById('stacked_image_wrapper');
 const toggle_btn = document.querySelectorAll('#hours .toggle_btn');
 const menu_btn = document.getElementById('menu_section_btn');
 menu_btn?.addEventListener('click', openMenuToggle);
+const links = document.querySelectorAll("#menu_section_dropdown a");
 
 function toggleMenu() {
     isMenuToggle = !isMenuToggle;
@@ -76,4 +77,18 @@ function openMenuToggle() {
         list?.classList.remove('active');
     }
     this.ariaExpanded = isMenuListToggle;
+}
+
+links.forEach( item =>{
+    item.addEventListener("click", clickHandler);
+})
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).getBoundingClientRect().top +  window.scrollY;
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
 }
