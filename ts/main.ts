@@ -8,6 +8,7 @@ const toggle_btn = document.querySelectorAll('#hours .toggle_btn');
 const menu_btn = document.getElementById('menu_section_btn');
 menu_btn?.addEventListener('click', openMenuToggle);
 const links = document.querySelectorAll("#menu_section_dropdown a");
+const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 function toggleMenu() {
     isMenuToggle = !isMenuToggle;
@@ -28,10 +29,9 @@ function toggleMenu() {
     this.ariaHasPopup = isMenuToggle;
 }
 
-stacked?.addEventListener('mouseover', function(event){
-    const target = event.target as HTMLElement;
-    const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    if(width >= 768) {
+if(width >= 768) {
+    stacked?.addEventListener('mouseover', function(event){
+        const target = event.target as HTMLElement;
         switch (target.parentElement?.id) {
             case 'stacked_image_1':
                 this.style.gridTemplate = 'min-content auto min-content / 41% 13% 13% 13% 13%';
@@ -52,26 +52,25 @@ stacked?.addEventListener('mouseover', function(event){
                 this.style.gridTemplate = 'min-content auto min-content / 41% 13% 13% 13% 13%';
                 break;
         }
-    }
-});
+    });
+}
 
-stacked?.addEventListener('click', function (event){
-    const target = event.target as HTMLElement;
-    const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    console.log('dragging...');
-    if(width <= 768) {
+if (width < 768) {
+    stacked?.addEventListener('click', function (event){
+        const target = event.target as HTMLElement;
+        let img_width = target.parentElement?.clientWidth;
         switch (target.parentElement?.id) {
             case 'stacked_image_1':
-                this.style.transform = 'translateX(calc(-393px))';
+                this.style.transform = 'translateX(calc(-'+img_width+'px))';
                 break;
             case 'stacked_image_2':
-                this.style.transform = 'translateX(calc(-393px * 2))';
+                this.style.transform = 'translateX(calc(-'+img_width+'px * 2))';
                 break;
             case 'stacked_image_3':
-                this.style.transform = 'translateX(calc(-393px * 3))';
+                this.style.transform = 'translateX(calc(-'+img_width+'px * 3))';
                 break;
             case 'stacked_image_4':
-                this.style.transform = 'translateX(calc(-393px * 4))';
+                this.style.transform = 'translateX(calc(-'+img_width+'px * 4))';
                 break;
             case 'stacked_image_5':
                 this.style.transform = 'translateX(0)';
@@ -80,8 +79,8 @@ stacked?.addEventListener('click', function (event){
                 this.style.transform = 'translateX(0)';
                 break;
         }
-    }
-})
+    })
+}
 
 toggle_btn.forEach( button => {
     button.addEventListener("click", function(){
