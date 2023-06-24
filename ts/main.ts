@@ -55,6 +55,34 @@ stacked?.addEventListener('mouseover', function(event){
     }
 });
 
+stacked?.addEventListener('click', function (event){
+    const target = event.target as HTMLElement;
+    const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    console.log('dragging...');
+    if(width <= 768) {
+        switch (target.parentElement?.id) {
+            case 'stacked_image_1':
+                this.style.transform = 'translateX(calc(-393px))';
+                break;
+            case 'stacked_image_2':
+                this.style.transform = 'translateX(calc(-393px * 2))';
+                break;
+            case 'stacked_image_3':
+                this.style.transform = 'translateX(calc(-393px * 3))';
+                break;
+            case 'stacked_image_4':
+                this.style.transform = 'translateX(calc(-393px * 4))';
+                break;
+            case 'stacked_image_5':
+                this.style.transform = 'translateX(0)';
+                break;
+            default:
+                this.style.transform = 'translateX(0)';
+                break;
+        }
+    }
+})
+
 toggle_btn.forEach( button => {
     button.addEventListener("click", function(){
         isListToggle = !isListToggle;
