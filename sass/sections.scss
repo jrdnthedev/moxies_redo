@@ -259,15 +259,6 @@
         }
     }
     #flavour_section {
-        display: grid;
-        grid-template: min-content auto min-content / repeat(12, 1fr);
-        column-gap: 1rem;
-        #flavour_intro{
-            grid-column: span 4;
-        }
-        #carousel {
-            grid-column: span 8;
-        }
         #flavour_intro {
             display: grid;
             align-items: center;
@@ -284,5 +275,19 @@
     }
     #aside_links {
         display: block;
+    }
+}
+
+@media screen and (min-width:1250px) {
+    #flavour_section {
+        display: grid;
+        grid-template: min-content auto min-content / repeat(12, 1fr);
+        column-gap: 1rem;
+        #flavour_intro{
+            grid-column: span 4;
+        }
+        #carousel {
+            grid-column: span 8;
+        }
     }
 }
