@@ -1,80 +1,78 @@
-
-@use 'variables';
+@use "variables";
 
 .headline_banner {
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    color: variables.$fire;
-    font-weight: 500;
+  text-transform: uppercase;
+  color: variables.$fire;
+  font-weight: 500;
 }
 
 .secondary_headline {
-    margin-bottom: 2rem;
-    font-weight: bold;
-    line-height: 2rem;
-    font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 1.4rem;
 }
 
 .fire_italic {
-    display: inline-block;
-    color: variables.$fire;
-    font-style: italic;
-    font-weight: 100;
-    &.stacked {
-        display: block;
-    }
+  display: inline-block;
+  color: variables.$fire;
+  font-style: italic;
+  font-weight: 100;
+  &.stacked {
+    display: block;
+  }
 }
 
-.paragraph{
-    line-height: 2rem;
-    margin-bottom: 1rem;
+.paragraph {
+  line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .caption_text {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .section_title {
-    font-size: 2rem;
-    text-transform: capitalize;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 #footer_title {
-    font-size: 2rem;
-    color: variables.$white;
-    font-weight: bold;
-    span {
-        font-style: italic;
-        font-weight: 100;
-    }
+  font-size: 2rem;
+  color: variables.$white;
+  font-weight: bold;
+  span {
+    font-style: italic;
+    font-weight: 100;
+  }
 }
 
 .address_title {
-    color: variables.$fire;
-    border-bottom: 1px solid variables.$emerald;
-    padding-bottom: .5rem;
-    font-size: 1rem;
-    font-weight: bold;
+  color: variables.$fire;
+  border-bottom: 1px solid variables.$emerald;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .address_body {
-    font-size: 1rem;
-    font-weight: bold;
-    font-style: normal;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
 }
 
 h2 {
-    margin-bottom: 2rem !important;
-    color: variables.$fire;
-    width: max-content;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgb(23, 63, 53);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+  margin-bottom: 2rem !important;
+  color: variables.$fire;
+  width: max-content;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(23, 63, 53);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
