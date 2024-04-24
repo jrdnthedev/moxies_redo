@@ -29,51 +29,64 @@ function toggleMenu() {
     this.ariaHasPopup = isMenuToggle;
 }
 
-if(width >= 768) {
-    stacked?.addEventListener('mouseover', function(event){
+if(stacked && width >= 768) {
+    stacked.addEventListener('mouseover', function(event){
         const target = event.target as HTMLElement;
-        switch (target.parentElement?.id) {
+        if(!target.parentElement) return null
+        switch (target.parentElement.id) {     
             case 'stacked_image_1':
-                this.style.gridTemplate = 'min-content auto min-content / 48% 13% 13% 13% 13%';
+                // this.style.gridTemplate = 'min-content auto min-content / 48% 13% 13% 13% 13%';
+                this.className = 'stacked_image_1';
                 break;
             case 'stacked_image_2':
-                this.style.gridTemplate = 'min-content auto min-content / 13% 48% 13% 13% 13%';
+                // this.style.gridTemplate = 'min-content auto min-content / 13% 48% 13% 13% 13%';
+                this.className = 'stacked_image_2';
                 break;
             case 'stacked_image_3':
-                this.style.gridTemplate = 'min-content auto min-content / 13% 13% 48% 13% 13%';
+                // this.style.gridTemplate = 'min-content auto min-content / 13% 13% 48% 13% 13%';
+                this.className = 'stacked_image_3';
                 break;
             case 'stacked_image_4':
-                this.style.gridTemplate = 'min-content auto min-content / 13% 13% 13% 48% 13%';
+                // this.style.gridTemplate = 'min-content auto min-content / 13% 13% 13% 48% 13%';
+                this.className = 'stacked_image_4';
                 break;
             case 'stacked_image_5':
-                this.style.gridTemplate = 'min-content auto min-content / 13% 13% 13% 13% 48%';
+                // this.style.gridTemplate = 'min-content auto min-content / 13% 13% 13% 13% 48%';
+                this.className = 'stacked_image_5';
                 break;
             default:
-                this.style.gridTemplate = 'min-content auto min-content / 48% 13% 13% 13% 13%';
+                // this.style.gridTemplate = 'min-content auto min-content / 48% 13% 13% 13% 13%';
+                this.className = target.parentElement.id;
                 break;
         }
     });
 }
 
-if (width < 768) {
-    stacked?.addEventListener('click', function (event){
+if (stacked && width < 768) {
+    stacked.addEventListener('click', function (event){
         const target = event.target as HTMLElement;
-        let img_width = target.parentElement?.clientWidth;
-        switch (target.parentElement?.id) {
+        if(!target.parentElement) return null
+        let img_width = target.parentElement.clientWidth;
+        switch (target.parentElement.id) {
             case 'stacked_image_1':
-                this.style.transform = 'translateX(calc(-'+img_width+'px))';
+                // this.style.transform = 'translateX(calc(-'+img_width+'px))';
+                this.className = 'stacked_image_1';
                 break;
             case 'stacked_image_2':
-                this.style.transform = 'translateX(calc(-'+img_width+'px * 2))';
+                // this.style.transform = 'translateX(calc(-'+img_width+'px * 2))';
+                this.className = 'stacked_image_2';
                 break;
             case 'stacked_image_3':
-                this.style.transform = 'translateX(calc(-'+img_width+'px * 3))';
+                // this.style.transform = 'translateX(calc(-'+img_width+'px * 3))';
+                this.className = 'stacked_image_3';
                 break;
             case 'stacked_image_4':
-                this.style.transform = 'translateX(calc(-'+img_width+'px * 4))';
+                // this.style.transform = 'translateX(calc(-'+img_width+'px * 4))';
+                this.className = 'stacked_image_4';
                 break;
             case 'stacked_image_5':
-                this.style.transform = 'translateX(0)';
+                // this.style.transform = 'translateX(0)';
+                this.className = 'stacked_image_5';
                 break;
             default:
                 this.style.transform = 'translateX(0)';

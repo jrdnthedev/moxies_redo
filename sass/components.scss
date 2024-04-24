@@ -1,37 +1,38 @@
-@use 'variables';
+@use "variables";
 
-button {
-    padding: 2rem 1rem 1rem 1rem;
-    border: none;
-    text-transform: uppercase;
-    font-size: .8rem;
+button,
+a {
+  padding: 2rem 1rem 1rem 1rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: variables.$white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  &.small {
+    padding: 0rem 1rem 0.5rem 2rem;
+    background-color: variables.$white;
+    border: 1px solid variables.$emerald;
+  }
+  &.primary {
+    background-color: variables.$emerald;
+  }
+  &.inverted {
+    background-color: variables.$white;
+    color: variables.$emerald;
+  }
+  &.fire {
+    background-color: variables.$fire;
     color: variables.$white;
-    font-weight: bold;
-    letter-spacing: 1px;
-    &.small{
-      padding: 0rem 1rem .5rem 2rem;
-      background-color: variables.$white;
-      border: 1px solid variables.$emerald;
-    }
-    &.primary {
-      background-color: variables.$emerald;
-    }
-    &.inverted {
-      background-color: variables.$white;
-      color: variables.$emerald;
-    }
-    &.fire {
-      background-color: variables.$fire;
-      color: variables.$white;
-    }
-    &.fire_inverted {
-      background-color: variables.$white;
-      color: variables.$fire;
-      border:1px solid variables.$fire;
-    }
+  }
+  &.fire_inverted {
+    background-color: variables.$white;
+    color: variables.$fire;
+    border: 1px solid variables.$fire;
+  }
 }
 
-.long-arrow-right{
+.long-arrow-right {
   display: inline-block;
   margin: 14px auto 0;
   width: 15px;
@@ -46,11 +47,11 @@ button {
   }
 }
 
-.long-arrow-right{
- transform: rotate(89deg);
+.long-arrow-right {
+  transform: rotate(89deg);
 }
 
-.long-arrow-right::after{
+.long-arrow-right::after {
   content: "";
   display: block;
   width: 1px;
@@ -61,7 +62,7 @@ button {
   top: 0;
 }
 
-.long-arrow-right.inverted::after{
+.long-arrow-right.inverted::after {
   content: "";
   display: block;
   width: 1px;
@@ -95,28 +96,28 @@ input {
   .cross {
     &:before {
       transform: rotate(0deg);
-      transition: .3s ease all;
+      transition: 0.3s ease all;
     }
     &:after {
       transform: rotate(-90deg);
-      transition: .3s ease all;
+      transition: 0.3s ease all;
     }
   }
 
   &.active {
-    .cross{
+    .cross {
       &:before {
         transform: rotate(45deg);
-        transition: .3s ease all;
+        transition: 0.3s ease all;
       }
       &:after {
         transform: rotate(-45deg);
-        transition: .3s ease all;
+        transition: 0.3s ease all;
       }
     }
   }
   .address_body {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -128,9 +129,10 @@ input {
   &:hover {
     opacity: 1;
   }
-  &:before, &:after {
+  &:before,
+  &:after {
     position: absolute;
-    content: ' ';
+    content: " ";
     height: 12px;
     width: 2px;
     background-color: variables.$emerald;
@@ -142,12 +144,12 @@ input {
   border-bottom: 1px solid variables.$emerald;
   .content {
     height: 0;
-    transition: .5s ease all;
+    transition: 0.5s ease all;
     overflow: hidden;
     &.active {
       height: 238px;
       padding-bottom: 1rem;
-      transition: .5s ease all;
+      transition: 0.5s ease all;
     }
   }
 }
@@ -188,20 +190,20 @@ input {
 
 .chevron::before {
   border-color: variables.$white;
-	border-style: solid;
-	border-width: 1px 1px 0 0;
-	content: '';
-	display: inline-block;
-	height: 10px;
-	left: 0.15px;
-	position: relative;
-	top: 0.15px;
-	transform: rotate(-45deg);
-	vertical-align: top;
-	width: 10px;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: "";
+  display: inline-block;
+  height: 10px;
+  left: 0.15px;
+  position: relative;
+  top: 0.15px;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 10px;
 }
 
 .chevron.bottom:before {
-	top: 0;
-	transform: rotate(135deg);
+  top: 0;
+  transform: rotate(135deg);
 }
