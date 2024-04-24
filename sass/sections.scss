@@ -117,18 +117,8 @@
     }
   }
   .stacked_image {
-    &:hover {
-      figcaption {
-        visibility: visible;
-        transition: 1s ease all;
-      }
-    }
     .bkg {
       margin-bottom: 0;
-    }
-    figcaption {
-      visibility: hidden;
-      transition: 0.1s ease all;
     }
   }
 
@@ -220,25 +210,48 @@
     display: grid;
     column-gap: 14px;
     grid-template: min-content auto min-content / 48% 13% 13% 13% 13%;
+    #stacked_image_1 figcaption,
+    #stacked_image_2 figcaption,
+    #stacked_image_3 figcaption,
+    #stacked_image_4 figcaption,
+    #stacked_image_5 figcaption {
+      visibility: hidden;
+      transition: 0.1s ease all;
+    }
     &.stacked_image_1 {
       grid-template: min-content auto min-content / 48% 13% 13% 13% 13%;
       transform: none;
+      #stacked_image_1 figcaption {
+        visibility: visible;
+      }
     }
     &.stacked_image_2 {
       grid-template: min-content auto min-content / 13% 48% 13% 13% 13%;
       transform: none;
+      #stacked_image_2 figcaption {
+        visibility: visible;
+      }
     }
     &.stacked_image_3 {
       grid-template: min-content auto min-content / 13% 13% 48% 13% 13%;
       transform: none;
+      #stacked_image_3 figcaption {
+        visibility: visible;
+      }
     }
     &.stacked_image_4 {
       grid-template: min-content auto min-content / 13% 13% 13% 48% 13%;
       transform: none;
+      #stacked_image_4 figcaption {
+        visibility: visible;
+      }
     }
     &.stacked_image_5 {
       grid-template: min-content auto min-content / 13% 13% 13% 13% 48%;
       transform: none;
+      #stacked_image_5 figcaption {
+        visibility: visible;
+      }
     }
     figure {
       margin-bottom: 0;
